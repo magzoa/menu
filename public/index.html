@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="menu">
+
+<base href="/menu_gdg/">
+
+
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GDG Cde</title>
+
+
+    <script type="text/javascript" src="public/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="public/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="public/js/app.js"></script>
+
+ <link href="public/vendor/toastr/toastr.css" rel="stylesheet">
+
+
+
+<script type="text/javascript" src="public/vendor/toastr/toastr.js"></script>
+
+
+
+<script src="public/js/interceptors/tokenInterceptor.js"></script>
+
+
+<script src="public/js/config/interceptorsConfig.js"></script>
+
+<script src="public/js/controllers/auspiciantesController.js"></script>
+
+<script src="public/js/controllers/principalController.js"></script>
+
+<script src="public/js/controllers/eventosController.js"></script>
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+  <link href="public/vendor/iconos/index.css" rel="stylesheet">
+
+
+    <link
+      rel="stylesheet"
+      href="public/vendor/materialize/dist/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="public/css/main.css" />
+    <link rel="stylesheet" href="public/css/normalize.css" />
+
+    <link rel="stylesheet" href="public/css/menu.css" />
+
+
+
+
+<script src="public/js/config/uiRouteConfig.js"></script>
+
+  </head>
+  <body>
+    <!-- #### Navbar #### -->
+    <div class="navbar-fixed">
+      <nav class="grey lighten-5">
+        <div class="nav-wrapper">
+          <a
+            href="#"
+            id="header-nav-logo"
+            class="brand-logo grey-text text-darken-1"
+            >GDG CDE</a
+          >
+          <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+            ><i class="material-icons grey-text text-darken-1">menu</i></a> -->
+
+
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+          <ul class="right hide-on-med-and-down">
+            <li><a class="blue-text text-darken-2">Sass</a></li>
+            <li><a class="blue-text text-darken-2">Components</a></li>
+            <li><a class="blue-text text-darken-2">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- #### Navbar END #### -->
+
+    <div class="container">
+<section>
+
+<div ui-view="principal">
+   
+</div>
+</section>
+
+
+<section>
+<div ui-view="eventos">
+  
+
+
+
+</div>
+
+</section>
+
+
+
+
+<aside>
+
+
+<div ui-view="auspiciantes">
+  
+</div>
+</aside>
+</div>
+
+
+    <!-- #### Mobile Navbar #### -->
+    <div>
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="background"><img src="" /></div>
+            <a href="#user"><img class="circle" src="public/images/iconogdg.png"/></a>
+            <a href="#name" class="gray-text text-darken-2"
+              ><span class="name">GDG CDE</span></a
+            >
+            <a href="#email" class="gray-text text-darken-2"
+              ><span class="email">gdgcde@gmail.com</span></a
+            >
+          </div>
+        </li>
+        <li><a ui-sref="principal" class="blue-text text-darken-2">Miembros</a></li>
+        <li><a  href="/" class="blue-text text-darken-2">Trabajos</a></li>
+        <li><a class="blue-text text-darken-2">Sobre GDG</a></li>
+      </ul>
+    </div>
+    <!-- #### Mobile Navbar END #### -->
+
+     <!-- JS JQuery -->
+    <script
+      src="public/vendor/jquery/dist/jquery.min.js"
+    ></script>
+
+
+    <!-- JS materialize -->
+    <script src="public/vendor/materialize/dist/js/materialize.min.js"></script>
+   
+    <!-- JS SideNav -->
+    <script src="public/js/navbar.js"></script>
+
+
+
+
+  </body>
+</html>
