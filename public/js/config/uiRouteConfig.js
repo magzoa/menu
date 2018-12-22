@@ -20,31 +20,18 @@ $stateProvider.state('inicio', {
     url: '/',
     views: {
       'principal': {
-        templateUrl: 'public/views/templates/principal.html',
-        controller: 'principalController'
-      },'eventos':{
-		templateUrl: 'public/views/templates/eventos.html',
-        controller: 'eventosController'
-      },'auspiciantes':{
-    templateUrl: 'public/views/templates/auspiciantes.html',
-        controller: 'auspiciantesController'
+        templateUrl: 'public/views/templates/slider.html',
+        controller: 'sliderController'
+      },'info':{
+        templateUrl:'public/views/templates/info.html'
+
+      },'integrante':{
+        templateUrl:'public/views/integrante/integrante.html',
+        controller:'integranteController'
+
       }
     }
 
-  }).state('integrante', {
-    url: '/integrante',
-    views:{
-      'principal':{
-        templateUrl: 'public/views/integrante/integrante.html',
-        controller: 'integranteController'
-      },'eventos':{
-    templateUrl: 'public/views/templates/eventos.html',
-        controller: 'eventosController'
-      },'auspiciantes':{
-    templateUrl: 'public/views/templates/auspiciantes.html',
-        controller: 'auspiciantesController'
-      }
-    }
   })
 
 	

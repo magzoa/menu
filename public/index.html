@@ -37,7 +37,7 @@
 
 <script src="public/js/controllers/integranteController.js"></script>
 
-
+<script src="public/js/controllers/sliderController.js"></script>
 
 
 
@@ -93,7 +93,7 @@
     <!-- #### Navbar END #### -->
 
     <div class="row">
-<aside class="col s12 l3">
+<section class="col s12 l12">
 
 <div class="">
 <div class="" ui-view="principal">
@@ -102,11 +102,13 @@
 </div>
 
 
-</aside>
+</section>
 
 
-<section class="card col s12 l6">
-<div ui-view="eventos">
+<div class="col s3 l3"></div>
+
+ <section class="col s9 l9">
+<div ui-view="info">
   
 
 
@@ -117,14 +119,13 @@
 
 
 
+ <aside class="col s12 l12">
 
-<aside class="col s12 l3">
 
-
-<div ui-view="auspiciantes">
+<div ui-view="integrante">
   
 </div>
-</aside>
+</aside> 
 
 
 
@@ -176,7 +177,20 @@
 
 $(document).ready(function(){
     $('.fixed-action-btn').floatingActionButton();
+
+
+
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
   });
+
+
+
+
+  });
+
+
 
 
 
