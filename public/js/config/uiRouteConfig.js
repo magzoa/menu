@@ -25,10 +25,20 @@ $stateProvider.state('inicio', {
       },'info':{
         templateUrl:'public/views/templates/info.html'
 
-      },'integrante':{
+      },'principal2':{
         templateUrl:'public/views/integrante/integrante.html',
         controller:'integranteController'
 
+      }
+    }
+
+  }).state('evento', {
+    url: '/evento',
+    views: {
+      'principal': {
+        templateUrl: 'public/views/evento/eventoSlider.html'
+      },'principal2': {
+        templateUrl: 'public/views/evento/eventos.html'
       }
     }
 
