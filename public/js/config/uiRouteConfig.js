@@ -13,7 +13,10 @@ angular.module("menu").config(['$stateProvider', '$urlRouterProvider', '$locatio
 
 console.log('Ingrese en UI Route 2');
 
-$stateProvider.state('principal', {
+
+
+
+$stateProvider.state('inicio', {
     url: '/',
     views: {
       'principal': {
@@ -28,6 +31,20 @@ $stateProvider.state('principal', {
       }
     }
 
+  }).state('integrante', {
+    url: '/integrante',
+    views:{
+      'principal':{
+        templateUrl: 'public/views/integrante/integrante.html',
+        controller: 'integranteController'
+      },'eventos':{
+    templateUrl: 'public/views/templates/eventos.html',
+        controller: 'eventosController'
+      },'auspiciantes':{
+    templateUrl: 'public/views/templates/auspiciantes.html',
+        controller: 'auspiciantesController'
+      }
+    }
   })
 
 	

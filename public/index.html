@@ -35,6 +35,8 @@
 
 <script src="public/js/controllers/eventosController.js"></script>
 
+<script src="public/js/controllers/integranteController.js"></script>
+
 
 
 
@@ -51,9 +53,9 @@
       href="public/vendor/materialize/dist/css/materialize.min.css"
     />
     <link rel="stylesheet" href="public/css/main.css" />
-    <link rel="stylesheet" href="public/css/normalize.css" />
+    <!-- <link rel="stylesheet" href="public/css/normalize.css" /> -->
 
-    <link rel="stylesheet" href="public/css/menu.css" />
+    <!-- <link rel="stylesheet" href="public/css/menu.css" /> -->
 
 
 
@@ -76,29 +78,34 @@
             ><i class="material-icons grey-text text-darken-1">menu</i></a> -->
 
 
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <a href="#" data-target="slide-out" class="sidenav-trigger grey-text text-darken-1"><i class="material-icons">menu</i></a>
 
 
           <ul class="right hide-on-med-and-down">
-            <li><a class="blue-text text-darken-2">Sass</a></li>
-            <li><a class="blue-text text-darken-2">Components</a></li>
-            <li><a class="blue-text text-darken-2">JavaScript</a></li>
+            <li><a ui-sref='inicio' class="grey-text text-darken-1">Inicio</a></li>
+            <li><a class="grey-text text-darken-1">Eventos</a></li>
+            <li><a ui-sref='integrante' class="grey-text text-darken-1">Miembros</a></li>
+            <li><a class="grey-text text-darken-1">Auspiciantes</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <!-- #### Navbar END #### -->
 
-    <div class="container">
-<section>
+    <div class="row">
+<aside class="col s12 l3">
 
-<div ui-view="principal">
+<div class="">
+<div class="" ui-view="principal">
    
 </div>
-</section>
+</div>
 
 
-<section>
+</aside>
+
+
+<section class="card col s12 l6">
 <div ui-view="eventos">
   
 
@@ -111,14 +118,21 @@
 
 
 
-<aside>
+<aside class="col s12 l3">
 
 
 <div ui-view="auspiciantes">
   
 </div>
 </aside>
+
+
+
+<div ng-include="'public/views/templates/footer.html'" class="z-depth-5"></div>
+
+
 </div>
+<!-- fin row -->
 
 
     <!-- #### Mobile Navbar #### -->
@@ -128,17 +142,18 @@
           <div class="user-view">
             <div class="background"><img src="" /></div>
             <a href="#user"><img class="circle" src="public/images/iconogdg.png"/></a>
-            <a href="#name" class="gray-text text-darken-2"
-              ><span class="name">GDG CDE</span></a
+            <a href="#name" class="grey-text text-darken-1"
+              ><span class="name grey-text text-darken-1">GDG CDE</span></a
             >
-            <a href="#email" class="gray-text text-darken-2"
-              ><span class="email">gdgcde@gmail.com</span></a
+            <a href="#email" class="grey-text text-darken-1"
+              ><span class="email grey-text text-darken-1">gdgcde@gmail.com</span></a
             >
           </div>
         </li>
-        <li><a ui-sref="principal" class="blue-text text-darken-2">Miembros</a></li>
-        <li><a  href="/" class="blue-text text-darken-2">Trabajos</a></li>
-        <li><a class="blue-text text-darken-2">Sobre GDG</a></li>
+        <li><a ui-sref='inicio' class="grey-text text-darken-1">Inicio</a></li>
+        <li><a ui-sref='integrante' class="grey-text text-darken-1">Miembros</a></li>
+        <li><a  href="/" class="grey-text text-darken-1">Trabajos</a></li>
+        <li><a class="grey-text text-darken-1">Sobre GDG</a></li>
       </ul>
     </div>
     <!-- #### Mobile Navbar END #### -->
@@ -156,7 +171,16 @@
     <script src="public/js/navbar.js"></script>
 
 
+<script type="text/javascript">
+  
 
+$(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+
+
+
+</script>
 
   </body>
 </html>
