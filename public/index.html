@@ -11,16 +11,16 @@
     <title>GDG Cde</title>
 
 
-    <script type="text/javascript" src="public/vendor/angular/angular.js"></script>
-    <script type="text/javascript" src="public/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="public/lib/js/angular.js"></script>
+    <script type="text/javascript" src="public/lib/js/angular-ui-router.min.js"></script>
 
     <script src="public/js/app.js"></script>
 
- <link href="public/vendor/toastr/toastr.css" rel="stylesheet">
+ <link href="public/lib/css/toastr/toastr.css" rel="stylesheet">
 
 
 
-<script type="text/javascript" src="public/vendor/toastr/toastr.js"></script>
+<script type="text/javascript" src="public/lib/css/toastr/toastr.js"></script>
 
 
 
@@ -28,6 +28,9 @@
 
 
 <script src="public/js/config/interceptorsConfig.js"></script>
+
+
+<script src="public/js/config/configValue.js"></script>
 
 <script src="public/js/controllers/auspiciantesController.js"></script>
 
@@ -37,7 +40,12 @@
 
 <script src="public/js/controllers/integranteController.js"></script>
 
+<script src="public/js/controllers/menuController.js"></script>
+
 <script src="public/js/controllers/sliderController.js"></script>
+
+
+<script src="public/js/services/menuService.js"></script>
 
 
 
@@ -45,13 +53,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   
 
-  <link href="public/vendor/iconos/index.css" rel="stylesheet">
+  <link href="public/lib/css/materialize/css/iconos/index.css" rel="stylesheet">
 
 
     <link
       rel="stylesheet"
-      href="public/vendor/materialize/dist/css/materialize.min.css"
-    />
+      href="public/lib/css/materialize/css/materialize.min.css"/>
     <link rel="stylesheet" href="public/css/main.css" />
     <!-- <link rel="stylesheet" href="public/css/normalize.css" /> -->
 
@@ -63,7 +70,7 @@
 <script src="public/js/config/uiRouteConfig.js"></script>
 
   </head>
-  <body>
+  <body ng-controller="menuController">
     <!-- #### Navbar #### -->
     <div class="navbar-fixed">
       <nav class="grey lighten-5">
@@ -81,11 +88,9 @@
   <a href="#" data-target="slide-out" class="sidenav-trigger grey-text text-darken-1"><i class="material-icons">menu</i></a>
 
 
-          <ul class="right hide-on-med-and-down">
-            <li><a ui-sref='inicio' class="grey-text text-darken-1">Inicio</a></li>
-            <li><a ui-sref='evento' class="grey-text text-darken-1">Eventos</a></li>
-            <li><a ui-sref='integrante' class="grey-text text-darken-1">Miembros</a></li>
-            <li><a class="grey-text text-darken-1">Auspiciantes</a></li>
+          <ul class="right hide-on-med-and-down" ng-repeat="menu in menus">
+          <li><a ui-sref='{{menu.name}}' class="grey-text text-darken-1">{{menu.name}}</a></li>
+           
           </ul>
         </div>
       </nav>
@@ -161,12 +166,12 @@
 
      <!-- JS JQuery -->
     <script
-      src="public/vendor/jquery/dist/jquery.min.js"
+      src="public/lib/js/jquery.min.js"
     ></script>
 
 
     <!-- JS materialize -->
-    <script src="public/vendor/materialize/dist/js/materialize.min.js"></script>
+    <script src="public/lib/css/materialize/js/materialize.min.js"></script>
    
     <!-- JS SideNav -->
     <script src="public/js/navbar.js"></script>
